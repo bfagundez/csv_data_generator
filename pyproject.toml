@@ -1,0 +1,30 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "csv-data-generator"
+version = "0.0.1"
+description = "A CSV data generator"
+authors = [
+  { name = "Bruno Fagundez", email = "bfagundez@gmail.com" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+  "click",
+]
+
+[project.entry-points.console_scripts] 
+csv-data-gen = "csv_data_generator.cli:hello"
+
+[project.urls]
+"Homepage" = "https://github.com/bfagundez/csv-data-generator"
+"Bug Tracker" = "https://github.com/bfagundez/csv-data-generator/issues"
+
