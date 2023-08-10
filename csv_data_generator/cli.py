@@ -1,13 +1,12 @@
 import click
+from .csv_generator import default_generator
 
 @click.command()
-@click.option('--count', default=1, help='Number of greetings.')
-@click.option('--name', prompt='Your name',
-              help='The person to greet.')
-def hello(count, name):
-    """Simple program that greets NAME for a total of COUNT times."""
-    for x in range(count):
-        click.echo(f"Hello {name}!")
+@click.option('--rows', default=5, help='Number of rows.')
+@click.option('--cols', default=5, help='Number of cols.')
+#@click.option('--name', prompt='Your name',
+#              help='The person to greet.')
+def start(rows, cols):
+    default_generator(rows, cols)
 
-if __name__ == '__main__':
-    hello()
+

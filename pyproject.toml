@@ -22,7 +22,7 @@ dependencies = [
 ]
 
 [project.entry-points.console_scripts] 
-csv-data-gen = "csv_data_generator.cli:hello"
+csv-data-gen = "csv_data_generator.cli:start"
 
 [project.urls]
 "Homepage" = "https://github.com/bfagundez/csv-data-generator"
