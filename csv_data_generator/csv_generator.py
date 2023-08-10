@@ -1,11 +1,14 @@
 import click
 
-def default_generator(rows: int = 5, cols: int = 5) -> None:
+def default_generator(rows: int = 5, cols: int = 5) -> str:
+    """Generate a csv file with default values."""
+    output = ""
     for header in range(cols):
-        click.echo(f"col{header},", nl=False)
-    click.echo("")
+        output += f"col{header},"
+    output += "\n"
     for x in range(rows):
         for y in range(cols):
-            click.echo(f"{y},", nl=False)
-        click.echo("")
+            output += f"{y},"
+        output += "\n"
+    return output
 
