@@ -1,5 +1,6 @@
 import click
 
+
 def default_generator(rows: int = 5, cols: int = 5) -> str:
     """Generate a csv file with default values."""
     output = ""
@@ -16,4 +17,3 @@ def default_generator(rows: int = 5, cols: int = 5) -> str:
         if x != range(rows)[-1]:
             output += "\n"
     return output
-

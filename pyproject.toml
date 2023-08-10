@@ -25,6 +25,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
+    "yapf",
     "pylint",
 ]
 test = [
@@ -36,6 +37,10 @@ test = [
 addopts = "--cov=csv_data_generator --cov-report html --cov-report term-missing --cov-fail-under 95"
 [tool.coverage.run]
 source = ["csv_data_generator"]
+
+[tool.yapf]
+blank_line_before_nested_class_or_def = true
+column_limit = 88
 
 [project.entry-points.console_scripts] 
 csv-data-gen = "csv_data_generator.cli:start"
