@@ -12,6 +12,8 @@ authors = [
 license = { file = "LICENSE" }
 readme = "README.md"
 classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -20,6 +22,20 @@ requires-python = ">=3.7"
 dependencies = [
   "click",
 ]
+
+[project.optional-dependencies]
+dev = [
+    "pylint",
+]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+[tool.pytest.ini_options]
+addopts = "--cov=csv_data_generator --cov-report html --cov-report term-missing --cov-fail-under 95"
+[tool.coverage.run]
+source = ["csv_data_generator"]
 
 [project.entry-points.console_scripts] 
 csv-data-gen = "csv_data_generator.cli:start"
