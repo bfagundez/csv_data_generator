@@ -58,6 +58,6 @@ column_limit = 88
 csv-data-gen = "csv_data_generator.cli:start"
 
 [project.urls]
-"Homepage" = "https://github.com/bfagundez/csv-data-generator"
-"Bug Tracker" = "https://github.com/bfagundez/csv-data-generator/issues"
+"Homepage" = "https://github.com/bfagundez/csv_data_generator"
+"Bug Tracker" = "https://github.com/bfagundez/csv_data_generator/issues"
 
