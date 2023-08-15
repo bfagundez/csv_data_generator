@@ -1,8 +1,21 @@
+import os
+
 class CSVGenerator:
     def __init__(self, rows: int = 5, cols: int = 5):
         self.rows = rows
         self.cols = cols
+        #self.words = open(self.get_words_path).read().splitlines()
+        #print(self.words)
+        print('this is the current path:')
+        current_path = os.path.dirname(os.path.realpath('__file__'))
+        print(current_path)
 
+    def get_words_path(self) -> str:
+        print('this is the current path:')
+        current_path = os.path.dirname(os.path.realpath('__file__'))
+        print(current_path)
+        #current_path + "/dict/words.txt"
+        return current_path
     def generate(self) -> str:
         """Generate a csv file with default values."""
         return self.headerGenerator() + self.rowsGenerator()
