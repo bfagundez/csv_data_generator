@@ -12,10 +12,18 @@ class CSVGenerator:
                 output += ","
         output += "\n"
         for x in range(self.rows):
-            for y in range(self.cols):
-                output += f"{y+1}"
-                if y != range(self.cols)[-1]:
-                    output += ","
-            if x != range(self.rows)[-1]:
-                output += "\n"
+            lastRow = x != range(self.rows)[-1]
+            output += self.rowGenerator(lastRow)
+        return output
+
+
+    def rowGenerator(self,lastRow = False) -> str:
+        """Generate a row with default values."""
+        output = ""
+        for y in range(self.cols):
+            output += f"{y+1}"
+            if y != range(self.cols)[-1]:
+                output += ","
+        if lastRow:
+            output += "\n"
         return output
