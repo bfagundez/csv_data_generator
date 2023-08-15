@@ -4,7 +4,7 @@ build-backend = "pdm.backend"
 
 [project]
 name = "csv-data-generator"
-version = "0.0.1"
+version = "0.0.2"
 description = "A CSV data generator"
 authors = [
   { name = "Bruno Fagundez", email = "bfagundez@gmail.com" },
