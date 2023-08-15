@@ -43,3 +43,11 @@ def test_provided_colcount():
                                           "1,2,3,4,5,6,7,8,9,10\n",
                                           "1,2,3,4,5,6,7,8,9,10"))
 
+def test_not_use_words_are_not_words():
+    assert CSVGenerator().generate().splitlines()[1].split(',')[0].isalpha() == False
+
+def test_use_words_rowcount():
+    assert len(CSVGenerator(fill_words=True).generate().splitlines()) == 6
+
+def test_use_words_are_words():
+    assert CSVGenerator(fill_words=True).generate().splitlines()[1].split(',')[0].isalpha()
