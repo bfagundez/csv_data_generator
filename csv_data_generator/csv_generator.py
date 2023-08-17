@@ -7,8 +7,8 @@ class CSVGenerator:
         self.rows = rows
         self.cols = cols
         self.use_words = fill_words
-        current_path = os.path.dirname(os.path.realpath('__file__'))
-        self.words = open(current_path + "/csv_data_generator/dict/words.txt").read().splitlines()
+        current_path = os.path.dirname(os.path.realpath(__file__))
+        self.words = open(current_path + "/dict/words.txt").read().splitlines()
 
     def generate(self) -> str:
         """Generate a csv file with default values."""
