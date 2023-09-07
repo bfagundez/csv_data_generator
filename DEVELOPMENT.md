@@ -9,7 +9,19 @@ Activate
 source venv/bin/activate
 ```
 
+Install all packages:
+```
+pip install -r requirements.txt
+```
+
 Run tests:
+
+Install test requirements with
+```
+pip install -e ".[test]"
+```
+
+Then 
 ```
 pytest
 ```
